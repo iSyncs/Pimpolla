@@ -1,0 +1,62 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: #1a1a1a; /* Fondo oscuro base */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aseguramos que el contenido se alinee desde arriba */
+    height: 100%;
+    text-align: center;
+    overflow: auto; /* Permite el desplazamiento */
+    position: relative;
+}
+
+/* Imagen de fondo fija */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('imagenflores.png') no-repeat center center fixed;
+    background-size: cover;
+    filter: grayscale(100%) brightness(0.4); /* Menos brillo */
+    opacity: 0.55; /* Opacidad del 55% */
+    z-index: -1; /* Queda detrás del contenido */
+}
+
+/* Contenedor del texto */
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    backdrop-filter: blur(8px); /* Efecto de desenfoque */
+    background: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+    margin-top: 20px; /* Espaciado arriba para el contenido */
+}
+
+/* Título */
+h1 {
+    font-size: 20px;
+    color: white;
+}
+
+/* Lista numerada */
+.decimal-list {
+    text-align: left;
+    padding-left: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.decimal-list li {
+    margin: 10px 0;
+}
